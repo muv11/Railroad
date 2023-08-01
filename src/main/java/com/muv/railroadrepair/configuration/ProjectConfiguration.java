@@ -48,9 +48,7 @@ public class ProjectConfiguration {
 
     @Bean
     public EntityManager entityManager() {
-        try (EntityManagerFactory entityManagerFactory = entityManagerFactory()) {
-            return entityManagerFactory.createEntityManager();
-        }
+        return entityManagerFactory().createEntityManager();
     }
 
 }
