@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    /*font-size: 35px;*/
+    font-size: 3.4vw;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 2.2vw;
+    font-weight: 600;
+}
+
+p {
+    font-size: 2vw;
+    font-weight: 200;
+}
+
+input {
+    border-color: #0066FF;
+    /*border-radius: 35px;*/
+    border-radius: 3.4vw;
+    border-style: solid;
+
+    text-align: center;
+    color: black;
+    font-size: 2vw;
+    font-weight: 200;
+
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: #242424;
+}
+
+select {
+    border-color: #0066FF;
+    border-radius: 3.4vw;
+    border-style: solid;
+
+    text-align: center;
+    color: black;
+    font-size: 2vw;
+    font-weight: 200;
+
+    padding: 0;
+}
+
+button {
+    background-color: #0066FF;
+    border-color: #0066FF;
+    /*border-radius: 35px;*/
+    border-radius: 3.4vw;
+    border-style: solid;
+
+    text-align: center;
+    color: white;
+    font-size: 2vw;
+    font-weight: 200;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: white;
+    color: #242424;
+}
