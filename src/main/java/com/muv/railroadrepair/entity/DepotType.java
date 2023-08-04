@@ -16,7 +16,7 @@ public class DepotType {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id", nullable = false)
-    private int id;
+    private Long id;
     @Basic
     @Column(name = "type", nullable = false, length = 100)
     private String type;
