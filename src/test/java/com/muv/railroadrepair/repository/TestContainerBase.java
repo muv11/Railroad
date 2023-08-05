@@ -15,7 +15,8 @@ public class TestContainerBase {
                 .withDatabaseName("geography_test")
                 .withUsername("test")
                 .withPassword("1234")
-                .withInitScript("sql/region.sql");
+                .withInitScript("sql/region.sql")
+                .withInitScript("sql/depot_type.sql");
     }
 
     @DynamicPropertySource
