@@ -37,5 +37,6 @@ out/
 .vscode/
 
 todo.md
-src/main/resources/images
+src/main/resources/static/images
 sql-main
+logs
