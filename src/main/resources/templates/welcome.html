@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Цифровой ремонт - добро пожаловать</title>
+
+    <link href="/static/common.css" rel="stylesheet">
+    <link href="/static/welcome.css" rel="stylesheet">
+</head>
+<body>
+    <div class="topPanel">
+        <img class="menuImg" src="/static/images/menu.png" alt="menu">
+        <img class="profileImg" src="/static/images/profile.png" alt="profile">
+        <img class="notificationsImg" src="/static/images/notifications.png" alt="notifications">
+    </div>
+
+    <div class="textPanel">
+        <h1 id="welcomeHeader">Добро пожаловать!</h1>
+        <h3 id="descriptionHeader">Расскажите о вашем предприятии</h3>
+    </div>
+
+    <div class="inputPanel">
+        <form action="/welcome" method="post">
+            <label for="regionSelect">
+                <select id="regionSelect">
+                </select>
+            </label>
+            <br>
+            <label for="citySelect">
+                <select id="citySelect">
+                </select>
+            </label>
+            <br>
+            <label for="companyNameInput">
+                <input id="companyNameInput" type="text" placeholder="Название компании">
+            </label>
+            <br>
+            <label for="divisionInput">
+                <input id="divisionInput" type="text" placeholder="Подразделение">
+            </label>
+            <br>
+            <label for="depotNameInput">
+                <input id="depotNameInput" type="text" placeholder="Название депо">
+            </label>
+            <br>
+            <label for="depotTypeSelect">
+                <select id="depotTypeSelect" multiple="multiple">
+                </select>
+            </label>
+            <br>
+            <label for="streetInput">
+                <input id="streetInput" type="text" placeholder="Улица">
+            </label>
+            <br>
+            <label for="houseNumberInput">
+                <input id="houseNumberInput" type="text" placeholder="Номер дома">
+            </label>
+            <br>
+            <button type="submit">Подтвердить</button>
+        </form>
+    </div>
+
+    <script src="/static/js/select.js"></script>
+</body>
+</html>
