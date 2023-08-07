@@ -16,7 +16,7 @@ public class CityRepository {
     }
 
     public List<City> findAllByRegionName(String name) {
-        return entityManager.createQuery("SELECT city FROM City city WHERE name = :name", City.class)
+        return entityManager.createQuery("SELECT city FROM City city WHERE regionById.name = :name", City.class)
                 .setParameter("name", name)
                 .getResultList();
     }
