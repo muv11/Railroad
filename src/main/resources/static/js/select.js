@@ -9,30 +9,34 @@ async function getRegionList() {
         select.appendChild(option);
     }
 }
-
-getRegionList().then();
+await getRegionList();
 
 function getSelectedRegion() {
     let selectedRegion = document.getElementById('regionSelect');
     return selectedRegion.options[selectedRegion.selectedIndex].text;
 }
 
+function removeOptions(select) {
+    while (select.options.length > 0) {
+        select.remove(0);
+    }
+}
+
 let cities = [];
 async function getCityListByRegion() {
-    // await getRegionList();
+    let select = document.getElementById('citySelect');
+    removeOptions(select);
     let region = getSelectedRegion();
     const response = await fetch(`http://localhost:8080/api/cities/${region}`);
     cities = await response.json();
-    console.log(cities);
-    let select = document.getElementById('citySelect');
     for (let i = 0; i < cities.length; i++){
         let option = document.createElement('option');
         option.text = cities[i].name;
         select.appendChild(option);
     }
 }
+await getCityListByRegion();
 
-//getCityListByRegion().then();
 document.getElementById('regionSelect').addEventListener('change', async function () {
     await getCityListByRegion();
 });
@@ -44,7 +48,8 @@ async function getDepotTypeList() {
     let select = document.getElementById('depotTypeSelect');
     for (let i = 0; i < depotTypes.length; i++){
         let option = document.createElement('option');
-        option.text = depotTypes[i].name;
+        option.text = depotTypes[i].type;
         select.appendChild(option);
     }
 }
+await getDepotTypeList();
