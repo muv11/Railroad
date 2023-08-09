@@ -20,4 +20,9 @@ public class CityRepository {
                 .setParameter("name", name)
                 .getResultList();
     }
+
+    public List<City> findAll() {
+        return entityManager.createQuery("SELECT city FROM City city", City.class).getResultList();
+    }
+
 }
