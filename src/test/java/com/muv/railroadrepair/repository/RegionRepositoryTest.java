@@ -13,7 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class RegionRepositoryTest extends TestContainerBase {
 
     @Autowired
-    RegionRepository regionRepository;
+    private RegionRepository regionRepository;
 
     @Test
     void regionList_whenGetSize_thenAmountOfRegionsInDB() {
