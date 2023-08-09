@@ -12,10 +12,11 @@ public class TestContainerBase {
 
     static {
         POSTGRE_SQL_CONTAINER = new PostgreSQLContainer<>("postgres:15")
-                .withDatabaseName("geography_test")
+                .withDatabaseName("test_db")
                 .withUsername("test")
                 .withPassword("1234")
                 .withInitScript("sql/region.sql")
+                .withInitScript("sql/city.sql")
                 .withInitScript("sql/depot_type.sql");
     }
 
