@@ -51,5 +51,6 @@ async function getDepotTypeList() {
         option.text = depotTypes[i].type;
         select.appendChild(option);
     }
+    select.size = depotTypes.length;
 }
 await getDepotTypeList();
